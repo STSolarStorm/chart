@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pie Chart</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<div style="width: 200px">
+  <canvas id="myChart"></canvas>
+</div>
+<script>
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx,{
+    type: 'doughnut',
+    data: {
+      labels: ['Happy', 'Sad', 'Apathy', 'Anger', 'Pity', 'Boredom', 'Tired'],
+      datasets: [{
+        label: 'Range of Emotions I Am Feeling in %',
+        data: [20, 5, 40, 1, 4, 10, 20],
+        backgroundColor: [
+            'rgb(255, 220, 36)',
+            'rgb(0, 255, 110)',
+            'rgb(93, 93, 93)',
+            'rgb(255, 0, 0)',
+            'rgb(194, 100, 186)',
+            'rgb(0, 0, 0)',
+            'rgb(121, 179, 222)'
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+
+<div style="width: 400px">
+  <canvas id="myChart2"></canvas>
+</div>
+<script>
+  var cty = document.getElementById("myChart2");
+  var myChart2 = new Chart(cty,{
+    type: 'pie',
+    data: {
+      labels: ['Mao Zedong', 'Joseph Stalin', 'Adolf Hitler', 'Leopold II of Belgium', 'Hideki Tojo', 'Ismail Enver Pasha', 'Pol Pot'],
+      datasets: [{
+        label: 'Dictators With Highest Death Tolls',
+        data: [78000000, 23000000, 17000000, 15000000, 5000000, 2500000, 1700000],
+        backgroundColor: [
+            'rgb(255, 0, 0)',
+            'rgb(192,101,101)',
+            'rgb(168,115,14)',
+            'rgb(9,196,116)',
+            'rgb(248,50,255)',
+            'rgb(29,0,255)',
+            'rgb(137,255,0)'
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+
+<div style="width: 300px">
+  <canvas id="myChart3"></canvas>
+</div>
+<script>
+  var ctz = document.getElementById("myChart3");
+  var myChart3 = new Chart(ctz,{
+    type: 'polarArea',
+    data: {
+      labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue'],
+      datasets: [{
+        label: 'Polar Chart Area',
+        data: [11, 10, 15, 3, 2],
+        backgroundColor: [
+          'rgb(255, 100, 130)',
+          'rgb(80, 190, 190)',
+          'rgb(255, 200, 85)',
+          'rgb(201, 203, 203)',
+          'rgb(50, 160, 240)'
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+</body>
+</html>
