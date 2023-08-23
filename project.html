@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width">
+  <title>Top Manga Sales of 2020</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<canvas id="myChart"></canvas>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Kimetsu no Yaiba', 'Kingdom', 'One Piece', 'Haikyuu!!', 'Jujutsu Kaisen', 'The Promised Neverland', '5-touban no Hanayome', 'Boku no Hero Academia', 'Spy x Family', 'Shingeki no Kyojin', 'Fire Force', 'Jibaku Shonen Hanako-kun', 'Dr. Stone', 'Kaguya-sama Love is War', 'Chainsaw Man', 'Tensei Shitara Slime Datta Ken', 'Kanojo, Okarishimasu', 'Kusuriya no Hitorigoto', 'Shuumatsu no Valkyrie', 'Mairimashita Iruma-kun', 'Golden Kamuy', 'Act-Age', 'One Punch Man', 'Nanatsu no Taizai', 'Tokyo Revengers', 'Darwins Game', 'Detective Conan', 'Black Clover', 'Gokushufudou', 'Ao Ashi', 'World Trigger', 'Wotakoi', 'Diamond no Ace Act II', 'Honey Lemon Soda', 'Blue Lock', 'Mystery to Inu Nakare', 'Jigokuraku', 'Dragon Ball Super', 'Grand Blue', 'Blue Period', 'Kawai Dake Ja Nai Shikimori-san', 'Yuru Camp', 'Kuroshitshuji', 'Tensei Kenja no Isekai Raifu', 'Karakai Jouzu no Takagi-san', 'Boruto', 'DAYS', 'We Never Learn', 'Runway de Waratte', '3-Gatsu no Lion'],
+      datasets: [{
+        label: '# of Manga Sales in 2020',
+        data: [82345447, 8251058, 7709667, ],
+        backgroundColor: [
+          'rgba(218, 29, 29, 0.2)',
+          'rgba(190, 150, 150, 0.2)',
+          'rgba(40, 174, 225, 0.2)',
+        ],
+        borderColor: [
+          'rgba(218, 29, 29, 1)',
+          'rgba(190, 150, 150, 1)',
+          'rgba(40, 174, 225, 1)',
+        ],
+        borderWidth: 5
+      }]
+    }
+  });
+</script>
+</body>
+</html>
